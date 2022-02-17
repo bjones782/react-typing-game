@@ -6,7 +6,7 @@ import Results from "./components/Results";
 import "./App.css";
 
 function App() {
-  const [word, setWord] = useState(Words);
+  const [word] = useState(Words);
   const [newWord, setNewWord] = useState(word[0]);
   const [disabled, setDisabled] = useState(true);
   const [correctResults, setCorrectResults] = useState([]);
@@ -58,9 +58,9 @@ function App() {
     }
   }, [disabled, time]);
 
-  useEffect(() => {
-    setNewWord(word[randomWord]);
-  }, []);
+  // useEffect(() => {
+  //   setNewWord(word[randomWord]);
+  // }, []);
 
   return (
     <div className="App">
