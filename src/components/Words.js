@@ -1,4 +1,4 @@
-export default [
+const wordList = [
   "Dismiss",
   "Spot",
   "North",
@@ -191,3 +191,5 @@ export default [
   "mood",
   "Terms",
 ];
+
+export default wordList;
