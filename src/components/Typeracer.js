@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef, useEffect } from "react";
 import Button from "./Button";
 
 const Typeracer = (props) => {
@@ -13,6 +13,12 @@ const Typeracer = (props) => {
     handleStart,
   } = props;
 
+  const inputRef = useRef();
+
+  useEffect(() => {
+    inputRef.current.focus();
+  });
+
   return (
     <div className="typeRacer">
       <div className="wordOutput">
@@ -24,6 +30,7 @@ const Typeracer = (props) => {
       <div className="wordValues">
         <input
           type="text"
+          ref={inputRef}
           disabled={disabled && disabled}
           onKeyPress={(e) => handleInput(e)}
           value={inputValue}
