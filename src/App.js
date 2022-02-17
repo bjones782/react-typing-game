@@ -19,7 +19,7 @@ function App() {
   let randomWord = Math.floor(Math.random() * word.length);
 
   const checkAnswer = () => {
-    if (inputValue.trim() === newWord) {
+    if (inputValue.trim().toLocaleLowerCase() === newWord.toLocaleLowerCase()) {
       setCorrectResults((prevCorrect) => [...prevCorrect, newWord]);
       setCountCorrect((prevCorrect) => prevCorrect + 1);
       return;
